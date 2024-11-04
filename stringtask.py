@@ -1,7 +1,14 @@
 # Clean up the following variable to give the clean version in lower case. Using inbuilt methods in the str class 
 name = "  JOHn  ."
-name = name.strip().replace('.,', '')
-print(name.lower())
+# name = name.strip().replace('.,', '')
+# print(name.lower())
+# change to lower case
+name = name.lower()
+# clean 
+name = name.strip()
+# replace
+name = name.replace(".", "")
+print(name)
 
 
 # Slice the below string to get you the resulting sentence:
@@ -27,10 +34,8 @@ print(fullname)
 
 # having the string r = '["E","W","C"]' #Manipulate it to display EWC
 r = '["E","W","C"]'
-# r2=''.join(filter(str.isalpha,r))
-# print (r2)
-r= r.strip("[]").replace('"', '').split(",")
-print(r)
-# Attempt questions in the link below. Whether you get the right answer or not, still read the solution explanation.
-# https://realpython.com/quizzes/python-strings/
+r2=''.join(filter(str.isalpha,r))
+print (r2)
 
+# Attempt questions in the link below. Whether you get the right answer or not, still read the solution explanation.
+# https://realpython.com/quizzes/python-strings/cls

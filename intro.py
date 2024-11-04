@@ -1,4 +1,4 @@
-# # o0print("Peter Mutinda")
+# # print("Peter Mutinda")
 # # print is used to display the python output on the terminal
 # # fname="Peter Mutinda"
 # # fname="Pwicks"
