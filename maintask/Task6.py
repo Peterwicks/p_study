@@ -15,6 +15,7 @@
 #         print("Incorrect password account closed")
 attempts = 4
 correct_password= 'admin@123'
+display= ''
 for i in range(attempts):
     password = input("Enter Password")
     if password== correct_password:
@@ -22,9 +23,10 @@ for i in range(attempts):
         break
     else:
         remaining_attempts=attempts -(i+1)
-        print (f"Incorrect password, you have {remaining_attempts} attempts remaining")
-        if remaining_attempts==0:
-            display= 'Account blocked'
+        if remaining_attempts>0:
+            display = (f"Incorrect password, you have {remaining_attempts} attempts remaining")
+        else:
+            display= "Account Blocked"
 print(display)
 
 # correct_password = 'admin@123'

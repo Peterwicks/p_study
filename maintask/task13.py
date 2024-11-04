@@ -4,11 +4,17 @@
 correct_email= 'admin@mail.com'
 correct_password= 'Admin@123'
 attempts = 3
-for i in range(attempts+1):
-   Email = input("Enter your Email")
-   if Email == correct_email:
-      Password = input("Enter your password")
-      if Password== correct_password:
-         Login= ('Log In successful')
-print(Login)
+for i in range(attempts):
+   Email = input("Enter your Email ")
+   Password = input("Enter your password")
+   if Email == correct_email and Password == correct_password:
+      output = ('Login successful')
+      break
+   else:
+      remaining_attempts = attempts -(i+1)
+      if remaining_attempts>0:
+         output=f'Incorrect Password, you have {remaining_attempts} reamaing'
+      else:
+         output= "Account Blocked"
+   print(output)
      
