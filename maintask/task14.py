@@ -18,3 +18,4 @@ while True:
         break
     except:
         print('Invalid character entered')
+

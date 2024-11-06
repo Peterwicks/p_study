@@ -27,3 +27,9 @@ if int(dob_split[2])>today_day:
     months = months-1
     days = (today_day+30)-int(dob_split[2])
 print(f"{years} years , {months} months {days} days")
+
+# dob = input('Enter date of birth dd/mm/yyyy')
+# dob= datetime.strptime(dob, '%d/%m/%y')
+# today= datetime.today()
+# age = today-dob()
+# print (f'age: {age.days//365} days')
