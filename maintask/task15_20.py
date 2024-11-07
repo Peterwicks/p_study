@@ -54,7 +54,7 @@ print(f'Your NHIF contribution is {NHIF}')
 # To find the Kenya NSSF Rate  using 6% of the Gross Salary. BUT ONLY A MINIMUM OF 18,000 Gross Salary CAN BE USED IN NSSF. 
 def calc_NSSF(GS):
     if GS>=0 and GS<18000:
-        nssf=0.6*GS
+        nssf=0.06*GS
     else:
         nssf=0.6*18000
     return(nssf)
@@ -69,3 +69,43 @@ def calc_NHDF(gs):
     return(nhdf)
 NHDF=calc_NHDF(Gross_salary)
 print(f'Your NHDF contribution is {NHDF}')
+# Task 18: Using Python or PHP or Java or Ruby or JavaScript
+# Calculate the taxable income.
+# i.e taxable_income = gross salary - (NSSF + NHDF + NHIF) 
+def cal_taxable_income(g,nsf,nhd,nhi):
+    taxable_income= g-(nsf+nhd+nhi)
+    return taxable_income
+Taxable_income= cal_taxable_income(Gross_salary, NSSF, NHDF, NHIF)
+print(f'your taxable income is {Taxable_income}')
+# TASK 19: Using Python or PHP or Java or Ruby or JavaScript
+# Continue with the same program and find the person's PAYEE using the taxable income above.
+# Find the Kenya PAYEE Tax Rate using THIS LINK
+# Write a normal program but use functions if you feel comfortable.
+def calc_PAYE (TI):
+    if TI <=24000:
+        paye= 0
+    elif TI>24000 and TI <=32333:
+        paye =(24000*0.1)+(TI-24000)*0.25
+    elif TI>32333 and TI <=500000:
+        paye = (24000*0.1)+(8333*0.25)+(TI-32333)*0.3
+    elif TI>500000 and TI<=800000:
+        paye= (24000*0.1)+(8333*0.25)+(467667*0.3)+(TI-500000)*0.325
+    else:
+        paye = (24000*0.1)+(8333*0.25)+(467667*0.3)+(300000*32.5)+(TI-800000)*0.35
+    return paye
+
+PAYE = calc_PAYE(Taxable_income)-2400
+print(f'Your PAYE Contribution is {PAYE}')
+
+# Using Python or PHP or Java or Ruby or JavaScript
+# Continue with the same program and calculate an individual’s Net Salary using:
+#  net_salary = gross_salary - (nhif + nhdf +  nssf + payee)
+# Write a normal program but use functions if you feel comfortable.
+def calc_net_salary(g_s, nif,nd, nss, payee):
+    net_salary= g_s - (nif+nd+nss+payee)
+    return net_salary
+Net_Salary = calc_net_salary(Gross_salary,NHIF,NHDF,NSSF,PAYE)
+print(f"Your net salary is {Net_Salary}")
+
+
+    
