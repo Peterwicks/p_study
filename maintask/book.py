@@ -8,5 +8,5 @@ class Book():
         self.year= year
     def book_description(self):
         return f'The book {self.tittle} written by {self.author} was published in the year {self.year}'
-Book1=Book('River and The Source', 'Margret A. Ogola', '2004') 
+Book1=Book('The River and The Source', 'Margret A. Ogola', '2004') 
 print(Book1.book_description())

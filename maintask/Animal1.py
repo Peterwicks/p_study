@@ -1,6 +1,7 @@
 # .Create a class Animal with attributes species and sound.Add a method make_sound that prints: "The [species] goes [sound]!",Instantiate objects for different animals and call make_sound.
 class animal1():
     def __init__(self, species, sound):
+        # attributes
         self.species= species
         self.sound=sound
     def make_sound(self):

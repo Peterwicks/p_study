@@ -1,6 +1,6 @@
 # Define a class Calculator with methods add, subtract, multiply, and divide that perform the respective operations on two numbers.
 # Create an object of Calculator and use it to perform some calculations.
-class calculator():
+class calculator:
     def __init__(self, num1, num2):
         self.num1= num1
         self.num2=num2
