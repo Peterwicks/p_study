@@ -71,11 +71,11 @@ class employee:
         self.name = name
         self.salary=salary
     def give_raise(self, increase):
-            self.salary = self.salary + (increase/100)*self.salary
+            self.salary +=(increase/100)*self.salary
             return self.salary
     def salaryincreament(self):
         return f'Hello, {self.name}, your new salary is {self.salary}'
-employee1= employee("peter", 50000)
+employee1= employee("pJohn", 50000)
 employee1.give_raise(10)
 print(employee1.salaryincreament())
 # Create a base class Vehicle with attributes brand and model.
@@ -99,3 +99,24 @@ Car1= Car('Premio','Toyota')
 Motorcycle1= Motorcycle('Yamaha', 'f3')
 print(Car1.honk())
 print(Motorcycle1.rev_engine())
+
+class Animal:
+    def __init__(self,name):
+        self.name=name
+
+    def sound(self):
+        return f"{self.name} make sound"
+    
+class Cat (Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed=breed
+    def sound(self):
+        parent_sound= super().sound()
+        return f'{parent_sound} the breed is {self.breed}'
+
+cat1=Cat("Leon", 'leopard')
+print(cat1.sound())
+
+       
+        
